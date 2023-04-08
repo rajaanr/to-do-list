@@ -1,0 +1,158 @@
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins/Poppins-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 52%, rgba(0,155,255,1) 100%);
+    padding: 10px;
+}
+
+.title {
+    align-items: center;
+    display: flex;
+    margin-bottom: 20px;
+    color: #eaeaea;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 1);
+
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 1);
+    backdrop-filter: blur(5px);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px ;
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin: 0 10px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+    color: black;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    right: 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    background: rgb(0, 176, 252);
+   
+}
+
+button:hover{
+    background-color: black;
+    transition: 0.3s ease-in-out;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    user-select: none;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-image: url('./assets/svg/circle.svg');
+    background-size: cover;
+    background-position: center;
+    left: 2.3rem;
+}
+
+ul li.checked {
+    color: #9c9c9c;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url('./assets/svg/check-circle-fill.svg');
+}
+
+ul li span {
+    position: absolute;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #eaeaea;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li span:hover {
+    color: red;
+    transition: 0.3s ease-in-out;
+}
+
+
+/* Media Queries */
+
+/* Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    html {
+      font-size: 80%;
+    }
+
+    button {
+        position: absolute;
+        margin-right: 2rem;
+        padding: 8.9px 30px;
+    }
+
+  }
+  
+  /* Medium devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    hmtl {
+      font-size: 90%;
+    }
+  }
+  
+  /* Large devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    html {
+      font-size: 95%;
+    }
+  }
+  
+  /* Extra large devices (desktops, 992px and up) */
